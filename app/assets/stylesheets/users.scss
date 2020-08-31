@@ -1,0 +1,103 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1 {
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+
+img {
+	width: 100%;
+	height: auto;
+	image-rendering: pixelated;
+}
+
+.cp_iptxt {
+  position: relative;
+  width: 40%;
+  margin: 40px 3%;
+  text-align: center;
+
+  input[type='text'] {
+    font: 17px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  input[type='submit'] {
+    font: 30px/30px sans-serif;
+    box-sizing: border-box;
+    width: 30%;
+    letter-spacing: 1px;
+    padding-left: 4em;
+    
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ef {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 1px solid #1b2538;
+  background-color: transparent;
+
+  ~ .focus_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: 0.4s;
+    background-color: #da3c41;
+  }
+
+  &:focus ~ .focus_line {
+    width: 100%;
+    transition: 0.4s;
+  }
+}
+
+.cp_iptxt.ef ~ .focus_line {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.ef {
+  ~ label {
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    color: #aaaaaa;
+  }
+
+  &:focus ~ label {
+    font-size: 12px;
+    top: -16px;
+    transition: 0.3s;
+    color: #da3c41;
+  }
+}
+
+.cp_iptxt.ef ~ label {
+  font-size: 12px;
+  top: -16px;
+  transition: 0.3s;
+  color: #da3c41;
+}
+

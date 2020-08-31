@@ -1,0 +1,14 @@
+<center>
+<head>
+	<title>Sold Out QRコード参照ページ</title>
+</head>
+<h1>Sold Out QRコード参照ページ</h1>
+<% if @flag %>
+	<h2><%= @user[:name] %></h2>
+	<h2><%= @user[:num] %></h2>
+ 	<img src="<%= @user[:qr] %>" alt="">
+<% else %>
+	<p> 登録番号が間違っています </p>
+<% end %>
+<%= link_to 'トップページ', '/' %>
+</center>
