@@ -22,9 +22,3 @@
 @user.name = '長谷川ユウダイ'
 @user.qr = "/assets/HasegawaYudai.jpg"
 @user.save
-
-@user = User.new
-@user.num = '1234567'
-@user.name = '田中たろう'
-@user.qr = "/assets/HasegawaYudai.jpg"
-@user.save
